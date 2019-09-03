@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="Progress Button Styles: Creative effects for loading buttons" />
+<link href="https://fonts.googleapis.com/css?family=Assistant:800|Major+Mono+Display|PT+Sans" rel="stylesheet">
+<meta name="keywords" content="progress button, loading button, 3d, loading indicator, progress indicator" />
+<meta name="author" content="Codrops" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Kanit|Raleway" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<style>
+body{
+background-image:url('img/back.png') !important;
+background-attachment:fixed;
+background-size:cover;
+}
+hr.type_1 {
+border: 0;
+height: 55px;
+background-image: url(img/hr1.png) !important;
+background-repeat: no-repeat;
+}
+hr.type_2 {
+border: 0;
+height: 55px;
+background-image: url(img/hr2.png) !important;
+background-repeat: no-repeat;
+}
+hr.type_3 {
+border: 0;
+height: 55px;
+background-image: url(img/hr3.png) !important;
+background-repeat: no-repeat;
+}
+hr.type_4 {
+border: 0;
+height: 55px;
+background-image: url(img/hr4.png) !important;
+background-repeat: no-repeat;
+}
+hr.type_5 {
+border: 0;
+height: 55px;
+background-image: url(img/hr5.png) !important;
+background-repeat: no-repeat;
+}
+hr.type_6 {
+border: 0;
+height: 55px;
+background-image: url(img/hr6.png) !important;
+background-repeat: no-repeat;
+}
+</style>
+</head>
+
+<body>
+<div class="container tab1">
+	<div class="row">
+		<div class="col-md-12" >
+			<center><h3>So you think you know about English grammar? Do the quiz and find out.</h3></center>
+		</div>
+	</div>
+	<div class="main">
+	<br>
+	<hr class="type_1 t1" onclick="rev(1)">
+	<div class="row ques1 hidden">
+		<div class="col-md-12">
+			<hr class="type_1" onclick="hide(1)">
+			<h5>Present simple and continuous</h5>
+			 Which sentence below describes something which is generally true? Which describes a temporary situation? 
+		</div>
+		<div class="col-md-6" style="margin:auto;">
+			<i>(a)&nbsp; I’m a hairdresser and I do a lot of work for TV.</i>
+		</div>
+		<div class="col-md-3">
+			<center><img class="mo" id="11" onclick="no(11,'true')" src="img/true1.png" onmouseover="this.src='img/true0.png'" onmouseout="this.src='img/true1.png'" style="margin-top:10px; width:70%;"></center>
+		</div>
+		<div class="col-md-3">
+			<center><img class="mo" id="1" onclick="go(1,'false')" src="img/false1.png" onmouseover="this.src='img/false0.png'" onmouseout="this.src='img/false1.png'" style="margin-top:10px; width:70%;"></center>
+		</div>
+		<hr>
+		<div class="col-md-6" style="margin:auto;">
+			<i>(b)&nbsp; At the moment, I’m getting up at about 5 a.m.</i>
+		</div>
+		<div class="col-md-3">
+			<center><img class="mo" id="12" onclick="no(12,'true')" src="img/true1.png" onmouseover="this.src='img/true0.png'" onmouseout="this.src='img/true1.png'" style="margin-top:10px; width:70%;"></center>
+		</div>
+		<div class="col-md-3">
+			<center><img class="mo" id="2" onclick="go(2,'false')" src="img/false1.png" onmouseover="this.src='img/false0.png'" onmouseout="this.src='img/false1.png'" style="margin-top:10px; width:70%;"></center>
+		</div>
+		<hr>
+	</div>
+	
+	<hr class="type_2 t2" onclick="rev(2)">
+	<div class="row ques2 hidden">
+		<div class="col-md-12">
+			<hr class="type_2" onclick="hide(2)">
+			<h5>Past simple and Past continuous</h5>
+			 Which verb form in the sentence below describes a single action in the past? Which describes an action in progress at that time? 
+		</div>
+		<div class="col-md-12 tt">
+			<i>I <b>met</b> Kathy when we <b>were</b> both <b>working</b> for this really awful boss.</i><br><br>
+		</div>
+		<div class="col-md-4" style="text-align:center; font-size:20px; font-weight:bold;">
+			(a)&nbsp; met
+			<center><img class="mo" id="3" onclick="go(3,'t')" src="img/t1.png" onmouseover="this.src='img/t0.png'" onmouseout="this.src='img/t1.png'" style="margin-top:10px; width:70%;"></center>
+			<center><img class="mo" id="13" onclick="no(13,'f')" src="img/f1.png" onmouseover="this.src='img/f0.png'" onmouseout="this.src='img/f1.png'" style="margin-top:10px; width:70%;"></center>
+		</div>
+		<div class="col-md-4" style="text-align:center; font-size:20px; font-weight:bold;">
+			(b)&nbsp; were
+			<center><img class="mo" id="4" onclick="go(4,'t')" src="img/t1.png" onmouseover="this.src='img/t0.png'" onmouseout="this.src='img/t1.png'" style="margin-top:10px; width:70%;"></center>
+			<center><img class="mo" id="14" onclick="no(14,'f')" src="img/f1.png" onmouseover="this.src='img/f0.png'" onmouseout="this.src='img/f1.png'" style="margin-top:10px; width:70%;"></center>
+		</div>
+		<div class="col-md-4" style="text-align:center; font-size:20px; font-weight:bold;">
+			(c)&nbsp; working
+			<center><img class="mo" id="15" onclick="no(15,'t')" src="img/t1.png" onmouseover="this.src='img/t0.png'" onmouseout="this.src='img/t1.png'" style="margin-top:10px; width:70%;"></center>
+			<center><img class="mo" id="5" onclick="go(5,'f')" src="img/f1.png" onmouseover="this.src='img/f0.png'" onmouseout="this.src='img/f1.png'" style="margin-top:10px; width:70%;"></center>
+		</div>
+	</div>
+	
+	<hr class="type_3 t3" onclick="rev(3)">
+	<div class="row ques3 hidden">
+		<div class="col-md-12">
+			<hr class="type_3" onclick="hide(3)">
+			<h5>State and action verbs </h5>
+			 Choose the correct verb in the sentences below. Why isn’t the other verb possible? 
+		</div>
+		<div class="col-md-12 tt">
+			<i>(a)&nbsp; I <button class="block" onclick="correct(1)" id="correct1">don’t remember</button> / <button class="block" onclick="wrong(11)" id="wrong11">’m not remembering</button> its name.</i><br><br>
+		</div>
+		<div class="col-md-12 tt">
+			<i>(b)&nbsp; My uncle <button class="block" onclick="correct(2)" id="correct2">owned</button> / <button class="block" onclick="wrong(12)" id="wrong12">was owning</button> a farm when I was a child.</i><br><br>
+		</div>
+	</div>
+	
+	<hr class="type_4 t4" onclick="rev(4)">
+	<div class="row ques4 hidden">
+		<div class="col-md-12">
+			<hr class="type_4" onclick="hide(4)">
+			<h5>Used to</h5>
+			 Look at the example sentences below and choose the correct options in the rule. 
+		</div>
+		<div class="col-md-12 tt">
+			<i>(a)&nbsp; My aunt and uncle <b>used to</b> own a farm.</i><br>
+		</div>
+		<div class="col-md-12 tt">
+			<i>(b)&nbsp; I <b>used to</b> spend hours staring at the fish.</i><br><br>
+		</div>
+		<div class="col-md-12 tt">
+			used to describes <button class="block" onclick="wrong(13)" id="wrong13">states</button> / <button class="block" onclick="correct(3)" id="correct3">habits</button> / <button class="block" onclick="wrong(14)" id="wrong14">single actions</button> in the <button class="block" onclick="wrong(15)" id="wrong15">present</button> / <button class="block" onclick="correct(4)" id="correct4">past</button>.
+		</div>
+	</div>
+	
+	<hr class="type_5 t5" onclick="rev(5)">
+	<div class="ques5 hidden">
+	<div class="row">
+		<div class="col-md-12">
+			<hr class="type_5" onclick="hide(5)">
+			<h5>Present perfect and Past simple </h5>
+			 Match examples 1–4 to descriptions a–d below. 
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 tt1">
+			1. <i>I<b>’ve known</b> Emma for six months.</i>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="wrong(16)" id="wrong16">(a) Something that continued for a period of time in the past. </button>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="wrong(17)" id="wrong17">(b) Something that happened in the past and is important now. We don’t know exactly when it happened.  </button>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="correct(6)" id="correct6">(c) Something that started in the past and continues to the present. </button>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="wrong(18)" id="wrong18">(d) Something that happened at a finished time in the past. </button>
+		</div>
+	</div>
+	<hr class="style-one">
+	<div class="row">
+		<div class="col-md-12 tt1">
+			2. <i>Kathy and I <b>were</b> really good friends for a couple of years.</i>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="wrong(19)" id="wrong19">(a) Something that continued for a period of time in the past. </button>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="correct(7)" id="correct7">(b) Something that started in the past and continues to the present. </button>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="wrong(20)" id="wrong20">(c) Something that happened in the past and is important now. We don’t know exactly when it happened. </button>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="wrong(21)" id="wrong21">(d) Something that happened at a finished time in the past. </button>
+		</div>
+	</div>
+	<hr class="style-one">
+	<div class="row">
+		<div class="col-md-12 tt1">
+			3. <i>My cousin and his wife <b>have had</b> a baby. </i>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="correct(8)" id="correct8">(a) Something that continued for a period of time in the past. </button>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="wrong(22)" id="wrong22">(b) Something that started in the past and continues to the present. </button>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="wrong(23)" id="wrong23">(c) Something that happened at a finished time in the past. </button>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="wrong(24)" id="wrong24">(d) Something that happened in the past and is important now. We don’t know exactly when it happened. </button>
+		</div>
+	</div>
+	<hr class="style-one">
+	<div class="row">
+		<div class="col-md-12 tt1">
+			4. <i>We<b>moved</b> in about 1993. </i>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="wrong(25)" id="wrong25">(a) Something that happened in the past and is important now. We don’t know exactly when it happened. </button>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="wrong(26)" id="wrong26">(b) Something that started in the past and continues to the present. </button>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="correct(9)" id="correct9">(c) Something that continued for a period of time in the past. </button>
+		</div>
+		<div class="col-md-3">
+			<button class="block1" onclick="wrong(27)" id="wrong27">(d) Something that happened at a finished time in the past. </button>
+		</div>
+	</div>
+	<hr class="style-one">
+	</div>
+	
+	<hr class="type_6 t6" onclick="rev(6)">
+	<div class="row ques6 hidden">
+		<div class="col-md-12">
+			<hr class="type_6" onclick="hide(6)">
+			<h5>Past perfect</h5>
+			 Look at the sentences below. Which action in bold happened first? 
+		</div> 
+		<div class="col-md-12 tt1">
+			<i>The house where I <b>was born</b> was quite small. My parents <b>had bought</b> it from an old man.</i>
+		</div>
+		<div class="col-md-6">
+			<button class="block" onclick="correct(10)" id="correct10">Bought the House</button>
+		</div>
+		<div class="col-md-6">
+			<button class="block" onclick="wrong(28)" id="wrong28">My Birth</button>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-md-4"><center><img id="" onclick="window.location.reload()" src="img/res2.png" onmouseover="this.src='img/res1.png'" onmouseout="this.src='img/res2.png'" style="margin-top:10px; width:60%;"></center></div>
+		<div class="col-md-4"><center><img id="submit" onclick="check()" src="img/sub2.png" onmouseover="this.src='img/sub1.png'" onmouseout="this.src='img/sub2.png'" style="margin-top:10px; width:60%;"></center></div>
+		<div class="col-md-4"><center><img id="sol" disabled onclick="solve()" src="img/solu2.png" onmouseover="this.src='img/solu1.png'" onmouseout="this.src='img/solu2.png'" style="margin-top:10px; width:60%;"></center></div>
+	</div>
+	</div>
+	<br>
+	<br>
+</div>
+<audio src="audio/well-done.mp3" id="audio1"></audio>
+<audio src="audio/try-again.mp3" id="audio2"></audio>
+<div class="tab2 hidden">
+	<img   height="auto" width="100%"  src="img/Welldone.gif">
+</div>
+
+</body>
+<script>
+$(document).ready(function load(){
+    var $block = $("#block");
+	$block.toggleClass('show');
+	$("#sol").css("pointer-events", "none");
+});
+
+function rev(a){
+	$('.ques1').addClass('hidden');
+	$('.ques2').addClass('hidden');
+	$('.ques3').addClass('hidden');
+	$('.ques4').addClass('hidden');
+	$('.ques5').addClass('hidden');
+	$('.ques6').addClass('hidden');
+	$('.ques'+a).removeClass('hidden');
+	$('.t1').removeClass('hidden');
+	$('.t2').removeClass('hidden');
+	$('.t3').removeClass('hidden');
+	$('.t4').removeClass('hidden');
+	$('.t5').removeClass('hidden');
+	$('.t6').removeClass('hidden');
+	$('.t'+a).addClass('hidden');
+}
+
+var q,w,e,r,t,y,i,j,k,l,m,n,o,p,s,u;
+function go(a,n){
+var b = a+10;
+var cor = n;
+console.log(cor);
+$('#'+a).attr("src", "img/"+cor+"3.png");
+$('#'+a).attr("onmouseover", "img/"+cor+"3.png");
+$('#'+a).attr("onmouseout", "img/"+cor+"3.png");
+
+var audio = document.getElementById('audio1');
+	audio.play();
+if(a==1){
+ q = 1;
+}
+else if (a==2){
+ w = 2;
+}
+else if (a==3){
+ e = 3;
+}
+else if (a==4){
+ r = 4;
+}
+else {
+ t = 5;
+}
+}
+
+function correct(a) {
+if(a==1){ i = 1;}
+else if (a==2){ j = 1;}
+else if (a==3){ k = 1;}
+else if (a==4){ l = 1;}
+else if (a==6){ n = 1;}
+else if (a==7){ o = 1;}
+else if (a==8){ p = 1;}
+else if (a==9){ s = 1;}
+else{ u = 1;}
+var audio = document.getElementById('audio1');
+	audio.play();
+	$('#correct' + a).css('background', '#005b00');
+	$('#correct' + a).css('color', 'white'); 
+}
+function wrong(a) {
+	$('#wrong' + a).css('background', 'red');
+	var audio = document.getElementById('audio2');
+	audio.play();
+}
+
+function check(){
+$("#sol").css("pointer-events", "auto");
+
+	if(q==1 && w==2 && e==3 && r==4 && t==5 && i==1 && j==1 && k==1 && l==1  && n==1 && o==1 && p==1 && s==1 && u==1 ){
+	var audio = document.getElementById('audio1');
+	audio.play();
+	setInterval(function(){ 
+	$('.tab1').addClass('hidden');
+	$('.tab2').removeClass('hidden');
+	},3000);
+	}
+	else{
+	var audio = document.getElementById('audio2');
+	audio.play();
+	}
+}
+function solve(){
+$("#submit").css("pointer-events", "none");
+$('#1').attr("src", "img/false3.png");$('#1').attr("onmouseover", "img/false3.png");$('#1').attr("onmouseout", "img/false3.png");
+$('#2').attr("src", "img/false3.png");$('#2').attr("onmouseover", "img/false3.png");$('#2').attr("onmouseout", "img/false3.png");
+$('#3').attr("src", "img/t3.png");$('#3').attr("onmouseover", "img/t3.png");$('#3').attr("onmouseout", "img/t3.png");
+$('#4').attr("src", "img/t3.png");$('#4').attr("onmouseover", "img/t3.png");$('#4').attr("onmouseout", "img/t3.png");
+$('#5').attr("src", "img/f3.png");$('#5').attr("onmouseover", "img/f3.png");$('#5').attr("onmouseout", "img/f3.png");
+$('#correct1').css("background", "#005b00");$('#correct1').css("color", "#fff");
+$('#correct2').css("background", "#005b00");$('#correct2').css("color", "#fff");
+$('#correct3').css("background", "#005b00");$('#correct3').css("color", "#fff");
+$('#correct4').css("background", "#005b00");$('#correct4').css("color", "#fff");
+$('#correct5').css("background", "#005b00");$('#correct5').css("color", "#fff");
+$('#correct6').css("background", "#005b00");$('#correct6').css("color", "#fff");
+$('#correct7').css("background", "#005b00");$('#correct7').css("color", "#fff");
+$('#correct8').css("background", "#005b00");$('#correct8').css("color", "#fff");
+$('#correct9').css("background", "#005b00");$('#correct9').css("color", "#fff");
+$('#correct10').css("background", "#005b00");$('#correct10').css("color", "#fff");
+
+}
+function no(b,n){
+var audio = document.getElementById('audio2');
+	audio.play();
+var c = b-10;
+var wro=n;
+console.log(c);
+$('#'+b).attr("src", "img/"+wro+"2.png");
+$('#'+b).attr("onmouseover", "img/"+wro+"2.png");
+$('#'+b).attr("onmouseout", "img/"+wro+"2.png");
+
+}
+
+</script>
+</html>
