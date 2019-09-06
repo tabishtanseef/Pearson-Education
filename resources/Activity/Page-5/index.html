@@ -1,0 +1,230 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="Progress Button Styles: Creative effects for loading buttons" />
+<link href="https://fonts.googleapis.com/css?family=Assistant:800|Major+Mono+Display|PT+Sans" rel="stylesheet">
+<meta name="keywords" content="progress button, loading button, 3d, loading indicator, progress indicator" />
+<meta name="author" content="Codrops" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Kanit|Raleway" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<style>
+body{
+background-image:url('img/yellow1.jpg');
+background-attachment:fixed;
+background-size:cover;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid ">
+	<div class="tab1">
+		<div class="col-md-12" >
+			<center><h3>Which characteristics below <b>do not</b> describe the behaviour of a good friend?</h3></center>
+		</div>
+	
+		<br>
+		<br>
+		<div class="main">
+
+		<div class="row aa"    >
+		<div class="col-md-8" style="margin:auto;">
+		<b>1.</b> &nbsp;&nbsp; You can <b>trust</b> them.
+		</div>
+		<div class="col-md-4">
+		<table style="width:100%;">
+		<tr>
+		<td><img src="img/1.png" onclick="go()" style="width:50px;"></td>
+		<td><img src="img/2.png" onclick="mo(1)" id="1" style="width:50px;"></td>
+		</tr>
+		</table>
+		
+		</div>
+		</div>
+		
+		<div class="row aa"    >
+		<div class="col-md-8" style="margin:auto;">
+		<b>2.</b> &nbsp;&nbsp; They always <b>tell</b> you <b>the truth</b>.
+		</div>
+		<div class="col-md-4">
+		<table style="width:100%;">
+		<tr>
+		<td><img src="img/1.png" onclick="go()" style="width:50px;"></td>
+		<td><img src="img/2.png" onclick="mo(2)" id="2" style="width:50px;"></td>
+		</tr>
+		</table>
+		</div>
+		</div>
+		
+		<div class="row aa"    >
+		<div class="col-md-8" style="margin:auto;">
+		<b>3.</b> &nbsp;&nbsp; They sometimes <b>lie to</b> you.
+		</div>
+		<div class="col-md-4">
+		<table style="width:100%;">
+		<tr>
+		<td><img src="img/1.png"  onclick="mo(3)" id="3"  style="width:50px;"></td>
+		<td><img src="img/2.png" onclick="go()" style="width:50px;"></td>
+		</tr>
+		</table>
+		</div>
+		</div>
+		
+		<div class="row aa"    >
+		<div class="col-md-8" style="margin:auto;">
+		<b>4.</b> &nbsp;&nbsp; They are <b>fun to be with</b>.
+		</div>
+		<div class="col-md-4">
+		<table style="width:100%;">
+		<tr>
+		<td><img src="img/1.png" onclick="go()" style="width:50px;"></td>
+		<td><img src="img/2.png" onclick="mo(4)" id="4" style="width:50px;"></td>
+		</tr>
+		</table>
+		</div>
+		</div>
+		
+		<div class="row aa"    >
+		<div class="col-md-8" style="margin:auto;">
+		<b>5.</b> &nbsp;&nbsp; They <b>gossip</b> about you <b>behind your back</b>.
+		</div>
+		<div class="col-md-4">
+		<table style="width:100%;">
+		<tr>
+		<td><img src="img/1.png" onclick="mo(5)" id="5" style="width:50px;"></td>
+		<td><img src="img/2.png" onclick="go()" style="width:50px;"></td>
+		</tr>
+		</table>
+		</div>
+		</div>
+		
+		<div class="row aa"    >
+		<div class="col-md-8" style="margin:auto;">
+		<b>6.</b> &nbsp;&nbsp; You can <b>confide in</b> them about your problems.
+		</div>
+		<div class="col-md-4">
+		<table style="width:100%;">
+		<tr>
+		<td><img src="img/1.png" onclick="go()" style="width:50px;"></td>
+		<td><img src="img/2.png" onclick="mo(6)" id="6" style="width:50px;"></td>
+		</tr>
+		</table>
+		</div>
+		</div>
+		
+		<div class="row aa"    >
+		<div class="col-md-8" style="margin:auto;">
+		<b>7.</b> &nbsp;&nbsp; They always <b>keep</b> their <b>promises</b>.
+		</div>
+		<div class="col-md-4">
+		<table style="width:100%;">
+		<tr>
+		<td><img src="img/1.png" onclick="go()" style="width:50px;"></td>
+		<td><img src="img/2.png" onclick="mo(7)" id="7" style="width:50px;"></td>
+		</tr>
+		</table>
+		</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-4"><center><img id="" onclick="window.location.reload()" src="img/res2.png" onmouseover="this.src='img/res1.png'" onmouseout="this.src='img/res2.png'" style="margin-top:10px; width:60%;"></center></div>
+			<div class="col-md-4"><center><img id="submit" onclick="check()" src="img/sub2.png" onmouseover="this.src='img/sub1.png'" onmouseout="this.src='img/sub2.png'" style="margin-top:10px; width:60%;"></center></div>
+			<div class="col-md-4"><center><img id="sol" disabled onclick="solve()" src="img/solu2.png" onmouseover="this.src='img/solu1.png'" onmouseout="this.src='img/solu2.png'" style="margin-top:10px; width:60%;"></center></div>
+		</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<div class="tab2 hidden">
+	<img   height="auto" width="100%"  src="img/Welldone.gif">
+</div>
+<audio id="audio2" src="audio/try-again.mp3"></audio>
+<audio id="audio1" src="audio/well-done.mp3"></audio>
+<script>
+$(document).ready(function load(){
+    var $block = $("#block");
+	$block.toggleClass('show');
+	$("#sol").css("pointer-events", "none");
+});
+
+function go(){
+    var audio = document.getElementById("audio2");
+	audio.play();
+}
+
+var q,w,e,r,t,y,u,i;
+
+function mo(a){
+if(a==1){
+ q = 1;
+}
+else if (a==2){
+ w = 1;
+}
+else if (a==3){
+ e = 1;
+}
+else if (a==4){
+ r = 1;
+}
+else if (a==5){
+ y = 1;
+}
+else if (a==6){
+ u = 1;
+}
+else {
+ t = 1;
+}
+var audio = document.getElementById("audio1");
+		audio.play();
+if(a==3 || a==5){
+$('#'+a).attr('src','img/3.png');
+}
+else{
+$('#'+a).attr('src','img/4.png');
+}
+}
+
+function check() {
+$("#sol").css("pointer-events", "auto");
+	if(q=="1" && w=="1" && e=="1" && r=="1" && t=="1" && y=="1" && u=="1" ){
+		var audio = document.getElementById("audio1");
+		audio.play();
+		setInterval(function(){ 
+		$('.tab1').addClass('hidden');
+		$('.tab2').removeClass('hidden');
+		},2000);
+    } 
+	else{
+		var audio = document.getElementById("audio2");
+		audio.play();
+	}   
+}
+
+
+function solve() {
+$('select').css("border",'2px solid green');
+$("#submit").css("pointer-events", "none");
+$('#1').attr('src','img/4.png');
+$('#2').attr('src','img/4.png');
+$('#3').attr('src','img/3.png');
+$('#4').attr('src','img/4.png');
+$('#5').attr('src','img/3.png');
+$('#6').attr('src','img/4.png');
+$('#7').attr('src','img/4.png');
+}
+</script>
+
+
+</body>
+</html>

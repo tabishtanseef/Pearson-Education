@@ -1,0 +1,178 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="Progress Button Styles: Creative effects for loading buttons" />
+<link href="https://fonts.googleapis.com/css?family=Assistant:800|Major+Mono+Display|PT+Sans" rel="stylesheet">
+<meta name="keywords" content="progress button, loading button, 3d, loading indicator, progress indicator" />
+<meta name="author" content="Codrops" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Kanit|Raleway" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<style>
+body{
+background-image:url('img/yellow1.jpg');
+background-attachment:fixed;
+background-size:cover;
+}
+.main{
+background-image:url('img/back.png') !important ;
+background-attachment:fixed;
+background-size:cover;
+	border: 4px solid #05510E;
+	padding:50px ;
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="tab1">
+		<div class="col-md-12" >
+			<center><h3>Match the meanings of get in the box with the examples in the diagram below.</h3></center>
+		</div>
+		<br>
+		<br>
+		<div class="row main">
+		
+		<div class="col-md-12 opt" >
+			<center><span>become</span>&nbsp; | &nbsp;<span>arrive</span>&nbsp; | &nbsp;<span>catch</span>&nbsp; | &nbsp;<span>obtain/receive</span>&nbsp; | &nbsp;<span>understand</span></center>
+		</div>
+			<br>
+			<br>
+			<br>
+		<div class="col-md-7">
+			<img src="img/ques.png" onclick="go()" style="margin:50px 0px; width:100%;">
+		</div>
+		<div class="col-md-5">
+			<div class="row aa">
+			<div class="col-md-12" style="margin:auto;">
+			1.	<select id=""><option selected>become</option></select>
+			</div>
+			</div>
+			
+			<div class="row aa">
+			<div class="col-md-12" style="margin:auto;">
+			2.	<select id="a1"></select>
+			</div>
+			</div>
+			
+			<div class="row aa"    >
+			<div class="col-md-12" style="margin:auto;">
+			3.	<select id="a2"></select>
+			</div>
+			</div>
+			
+			<div class="row aa"    >
+			<div class="col-md-12" style="margin:auto;">
+			4.	<select id="a3"></select>
+			</div>
+			</div>
+		
+			<div class="row aa"    >
+			<div class="col-md-12" style="margin:auto;">
+			5.	<select id="a4"></select>
+			</div>
+			</div>
+			
+			<div class="row aa"    >
+			<div class="col-md-12" style="margin:auto;">
+			6.	<select id=""><option selected>phrasal verbs</option></select>
+			</div>
+			</div>
+			
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-4"><center><img id="" onclick="window.location.reload()" src="img/res2.png" onmouseover="this.src='img/res1.png'" onmouseout="this.src='img/res2.png'" style="margin-top:10px; width:60%;"></center></div>
+			<div class="col-md-4"><center><img id="submit" onclick="check()" src="img/sub2.png" onmouseover="this.src='img/sub1.png'" onmouseout="this.src='img/sub2.png'" style="margin-top:10px; width:60%;"></center></div>
+			<div class="col-md-4"><center><img id="sol" disabled onclick="solve()" src="img/solu2.png" onmouseover="this.src='img/solu1.png'" onmouseout="this.src='img/solu2.png'" style="margin-top:10px; width:60%;"></center></div>
+		</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<div class="tab2 hidden">
+	<img height="auto" width="100%"  src="img/Welldone.gif">
+</div>
+<audio id="audio2" src="audio/try-again.mp3"></audio>
+<audio id="audio1" src="audio/well-done.mp3"></audio>
+<script>
+$(document).ready(function load(){
+    var $block = $("#block");
+	$block.toggleClass('show');
+	$("#sol").css("pointer-events", "none");
+});
+
+function check() {
+
+ var a1 = document.getElementById("a1");
+ var a2 = document.getElementById("a2");
+ var a3 = document.getElementById("a3");
+ var a4 = document.getElementById("a4");
+
+ 
+var ans1= a1.options[a1.selectedIndex].text;
+var ans2= a2.options[a2.selectedIndex].text;
+var ans3= a3.options[a3.selectedIndex].text;
+var ans4= a4.options[a4.selectedIndex].text;
+
+$("#sol").css("pointer-events", "auto");
+ if(ans1=="" && ans2=="" && ans3=="" && ans4==""){
+$("#sol").css("pointer-events", "none");
+ }
+
+if(ans1!="understand"){
+$('#a1').css("border",'2px solid red');
+}
+if(ans2!="obtain/receive"){
+$('#a2').css("border",'2px solid red');
+}
+if( ans3!="arrive"){
+$('#a3').css("border",'2px solid red');
+}
+if(ans4!="catch"){
+$('#a4').css("border",'2px solid red');
+}
+	if(ans1=="understand" && ans2=="obtain/receive" && ans3=="arrive" && ans4=="catch"  ){
+		var audio = document.getElementById("audio1");
+		audio.play();
+		setInterval(function(){ 
+		$('.tab1').addClass('hidden');
+		$('.tab2').removeClass('hidden');
+		},2000);
+    } 
+	else{
+		var audio = document.getElementById("audio2");
+		audio.play();
+	}   
+}
+
+window.onload = function(e){ 
+    $('#a1').append("<option selected disabled>     </option><option>understand</option><option>obtain/receive</option><option>catch</option><option>arrive</option>");
+    $('#a2').append("<option selected disabled>     </option><option>understand</option><option>obtain/receive</option><option>catch</option><option>arrive</option>");
+    $('#a3').append("<option selected disabled>     </option><option>understand</option><option>obtain/receive</option><option>catch</option><option>arrive</option>");
+    $('#a4').append("<option selected disabled>     </option><option>understand</option><option>obtain/receive</option><option>catch</option><option>arrive</option>");
+  
+}
+
+function solve() {
+$('select').css("border",'2px solid green');
+$("#submit").css("pointer-events", "none");
+$('#a1').val('understand');
+$('#a2').val('obtain/receive');
+$('#a3').val('arrive');
+$('#a4').val('catch');
+}
+</script>
+
+
+</body>
+</html>

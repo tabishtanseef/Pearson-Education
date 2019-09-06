@@ -1,0 +1,201 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="Progress Button Styles: Creative effects for loading buttons" />
+<link href="https://fonts.googleapis.com/css?family=Assistant:800|Major+Mono+Display|PT+Sans" rel="stylesheet">
+<meta name="keywords" content="progress button, loading button, 3d, loading indicator, progress indicator" />
+<meta name="author" content="Codrops" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Kanit|Raleway" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<style>
+body{
+background-image:url('img/yellow1.jpg');
+background-attachment:fixed;
+background-size:cover;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid ">
+	<div class="tab1">
+		<div class="col-md-12" >
+			<center><h3>Complete the sentences with an auxiliary verb.</h3></center>
+		</div>
+	
+		<br>
+		<br>
+		<div class="main">
+
+		<div class="row aa"    >
+		<div class="col-md-12">
+		<b>1.</b> &nbsp;&nbsp; I <select id="a1"></select> like your shoes. Where did you get them?
+		
+		</div>
+		</div>
+		
+		<div class="row aa"    >
+		<div class="col-md-12">
+		<b>2.</b> &nbsp;&nbsp; Everyone else seemed to like it, but I <select id="a2"></select>.
+		</div>
+		</div>
+		
+		<div class="row aa"    >
+		<div class="col-md-12">
+		<b>3.</b> &nbsp;&nbsp; You don’t care about what I want, <select id="a3"></select> you?
+		</div>
+		</div>
+		
+		
+		<div class="row aa"    >
+		<div class="col-md-12">
+		<b>4.</b> &nbsp;&nbsp; Things have got worse round here, <select id="a4"></select> they?
+		</div>
+		</div>
+		
+		<div class="row aa"    >
+		<div class="col-md-12">
+		<b>5.</b> &nbsp;&nbsp;	You <select id="a5"></select> remember to lock the back door when you left the house, didn’t you?
+		</div>
+		</div>
+		
+		<div class="row aa"    >
+		<div class="col-md-12">
+		<b>6.</b> &nbsp;&nbsp;	Thanks for a lovely evening, we really enjoyed it, <select id="a6"></select> we George? 
+		</div>
+		</div>
+		
+		<div class="row aa"    >
+		<div class="col-md-12">
+		<b>7.</b> &nbsp;&nbsp; Alex can’t come but everyone else <select id="a7"></select>.
+		</div>
+		</div>
+		
+		<div class="row aa"    >
+		<div class="col-md-12">
+		<b>8.</b> &nbsp;&nbsp; But you’re feeling better now, <select id="a8"></select> you?
+		</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-4"><center><img id="" onclick="window.location.reload()" src="img/res2.png" onmouseover="this.src='img/res1.png'" onmouseout="this.src='img/res2.png'" style="margin-top:10px; width:60%;"></center></div>
+			<div class="col-md-4"><center><img id="submit" onclick="check()" src="img/sub2.png" onmouseover="this.src='img/sub1.png'" onmouseout="this.src='img/sub2.png'" style="margin-top:10px; width:60%;"></center></div>
+			<div class="col-md-4"><center><img id="sol" disabled onclick="solve()" src="img/solu2.png" onmouseover="this.src='img/solu1.png'" onmouseout="this.src='img/solu2.png'" style="margin-top:10px; width:60%;"></center></div>
+		</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<div class="tab2 hidden">
+	<img   height="auto" width="100%"  src="img/Welldone.gif">
+</div>
+<audio id="audio2" src="audio/try-again.mp3"></audio>
+<audio id="audio1" src="audio/well-done.mp3"></audio>
+<script>
+$(document).ready(function load(){
+    var $block = $("#block");
+	$block.toggleClass('show');
+	$("#sol").css("pointer-events", "none");
+});
+
+function check() {
+
+ var a1 = document.getElementById("a1");
+ var a2 = document.getElementById("a2");
+ var a3 = document.getElementById("a3");
+ var a4 = document.getElementById("a4");
+ var a5 = document.getElementById("a5");
+ var a6 = document.getElementById("a6");
+ var a7 = document.getElementById("a7");
+ var a8 = document.getElementById("a8");
+
+ 
+var ans1= a1.options[a1.selectedIndex].text;
+var ans2= a2.options[a2.selectedIndex].text;
+var ans3= a3.options[a3.selectedIndex].text;
+var ans4= a4.options[a4.selectedIndex].text;
+var ans5= a5.options[a5.selectedIndex].text;
+var ans6= a6.options[a6.selectedIndex].text;
+var ans7= a7.options[a7.selectedIndex].text;
+var ans8= a8.options[a8.selectedIndex].text;
+
+$("#sol").css("pointer-events", "auto");
+ if(ans1=="" && ans2=="" && ans3=="" && ans4=="" && ans5=="" && ans6=="" && ans7=="" && ans8==""){
+$("#sol").css("pointer-events", "none");
+ }
+
+if(ans1!="of"){
+$('#a1').css("border",'2px solid red');
+}
+if(ans2!="against"){
+$('#a2').css("border",'2px solid red');
+}
+if(ans3!="by"){
+$('#a3').css("border",'2px solid red');
+}
+if(ans4!="have"){
+$('#a4').css("border",'2px solid red');
+}
+if(ans5!="each"){
+$('#a5').css("border",'2px solid red');
+}
+if(ans6!="down"){
+$('#a6').css("border",'2px solid red');
+}
+if(ans7!="out"){
+$('#a7').css("border",'2px solid red');
+}
+if(ans8!="than"){
+$('#a8').css("border",'2px solid red');
+}
+	if(ans1=="of" && ans2=="against" && ans3=="by" && ans4=="have" && ans5=="each" && ans6=="down" && ans7=="out" && ans8=="than" ){
+		var audio = document.getElementById("audio1");
+		audio.play();
+		setInterval(function(){ 
+		$('.tab1').addClass('hidden');
+		$('.tab2').removeClass('hidden');
+		},2000);
+    } 
+	else{
+		var audio = document.getElementById("audio2");
+		audio.play();
+	}   
+}
+
+window.onload = function(e){ 
+    $('#a1').append("<option selected disabled>     </option><option>by</option><option>of</option><option>than</option><option>down</option><option>have</option><option>against</option><option>out</option><option>each</option>");
+    $('#a2').append("<option selected disabled>     </option><option>by</option><option>of</option><option>than</option><option>down</option><option>have</option><option>against</option><option>out</option><option>each</option>");
+    $('#a3').append("<option selected disabled>     </option><option>by</option><option>of</option><option>than</option><option>down</option><option>have</option><option>against</option><option>out</option><option>each</option>");
+    $('#a4').append("<option selected disabled>     </option><option>by</option><option>of</option><option>than</option><option>down</option><option>have</option><option>against</option><option>out</option><option>each</option>");
+    $('#a5').append("<option selected disabled>     </option><option>by</option><option>of</option><option>than</option><option>down</option><option>have</option><option>against</option><option>out</option><option>each</option>");
+    $('#a6').append("<option selected disabled>     </option><option>by</option><option>of</option><option>than</option><option>down</option><option>have</option><option>against</option><option>out</option><option>each</option>");
+    $('#a7').append("<option selected disabled>     </option><option>by</option><option>of</option><option>than</option><option>down</option><option>have</option><option>against</option><option>out</option><option>each</option>");
+    $('#a8').append("<option selected disabled>     </option><option>by</option><option>of</option><option>than</option><option>down</option><option>have</option><option>against</option><option>out</option><option>each</option>");
+}
+
+function solve() {
+$('select').css("border",'2px solid green');
+$("#submit").css("pointer-events", "none");
+$('#a1').val('of');
+$('#a2').val('against');
+$('#a3').val('by');
+$('#a4').val('have');
+$('#a5').val('each');
+$('#a6').val('down');
+$('#a7').val('out');
+$('#a8').val('than');
+}
+</script>
+
+
+</body>
+</html>
