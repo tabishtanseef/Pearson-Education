@@ -3,7 +3,7 @@ var fPage = 1;
 						'config': {
 							'subject': 'Pearson Education',
 							'class': 'Class 6',
-							'id': 'gud_349',
+							'id': 'gud_187',
 							'totalPages': 10,
 							'bookWidth': 2570,
 							'bookHeight': 3300
