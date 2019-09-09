@@ -162,12 +162,10 @@ $('#a8').css("border",'2px solid red');
 		var $block = $("#block");
 		$block.toggleClass('show');
 		var $blocks = $("#blocks");
-		$blocks.toggleClass('show');
-		setInterval(function(){ $('#block').addClass('hidden'); 
-		},300);
 		setInterval(function(){ 
-		window.location="../index.html";
-		},3000);
+		$('.tab1').addClass('hidden');
+		$('.tab2').removeClass('hidden');
+		},2000);
     } 
 	else{
 		var audio = document.getElementById("audio2");
